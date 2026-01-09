@@ -145,16 +145,31 @@
         /* Footer */
         
         footer {
-            margin-top: 40px;
-            padding: 15px;
-            font-size: 12px;
-            color: var(--secondary);
-            display: flex;
-            justify-content: center;
-            /* centers content horizontally */
-            align-items: center;
-            /* centers content vertically if needed */
-        }
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 12px;
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column; /* stack content on small screens */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6); /* fixed invalid CSS */
+    padding-left: 2px;
+}
+
+@media (min-width: 600px) {
+    footer {
+        flex-direction: row; /* row layout for larger screens */
+        gap: 5px;
+    }
+}
+
     </style>
 </head>
 
@@ -191,8 +206,10 @@
     </div>
 
     <footer>
-        © 2026 Mian Medical Pharmacy. All Rights Reserved | A Product of MetaNect | Developed By:<a style="text-decoration: none; color: 'rgba(0, 0, 0, 0.08)'; padding-left:2px;" href="https://www.linkedin.com/in/mufassir-shah-a39ab1250/">  Mufassir Shah</a>
-    </footer>
+    © 2026 Mian Medical Pharmacy. All Rights Reserved | A Product of MetaNect | Developed By:
+    <a href="https://www.linkedin.com/in/mufassir-shah-a39ab1250/">Mufassir Shah</a>
+</footer>
+
 
 </body>
 
