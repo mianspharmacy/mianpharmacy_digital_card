@@ -175,6 +175,19 @@ footer a {
     padding-left: 2px;
 }
 
+footer .developer-link {
+    text-decoration: none; /* removes underline by default */
+    color: var(--primary); /* make it visually distinct */
+    font-weight: 600;      /* slightly bolder */
+    transition: all 0.3s ease;
+}
+
+footer .developer-link:hover {
+    text-decoration: underline; /* underline on hover for clear clickability */
+    color: #7f39fb;             /* optional: slightly different color on hover */
+}
+
+
 @media (min-width: 600px) {
     footer {
         flex-direction: row; /* row layout for larger screens */
@@ -231,9 +244,13 @@ footer a {
         </div>
     </div>
 
-    <footer>
+    <!-- <footer>
     © 2026 Mian Medical Pharmacy. All Rights Reserved | A Product of MetaNect | Developed By:
     <a href="https://www.linkedin.com/in/mufassir-shah-a39ab1250/">Mufassir Shah</a>
+</footer> -->
+<footer>
+    © 2026 Mian Medical Pharmacy. All Rights Reserved | A Product of MetaNect | Developed By:
+    <a class="developer-link" href="https://www.linkedin.com/in/mufassir-shah-a39ab1250/">Mufassir Shah</a>
 </footer>
 
 
