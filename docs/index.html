@@ -106,6 +106,48 @@
             font-size: 13px;
             color: var(--secondary);
         }
+
+        nav {
+    background: var(--white);
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap; /* allows items to move to next line on small screens */
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav .owner {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1rem;
+    margin-bottom: 5px; /* space for small screens when wrapping */
+}
+
+nav .tagline {
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column; /* stack vertically on small screens */
+        align-items: center;    /* center everything */
+        gap: 5px;               /* space between owner and tagline */
+    }
+
+    nav .owner {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    nav .tagline {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+}
+
         /* Main Card */
         
         .container {
